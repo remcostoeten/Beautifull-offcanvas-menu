@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
-import Toggle from 'beautifull-offcanvas/Toggle'; // Assuming 'beautifull-offcanvas' is the package name
+import Toggle from './Toggle';
 
-const MyComponent = () => {
+export default function OffcanvasMenu({ tagline, links }) {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const handleCloseMenu = () => {
 		setMenuOpen(false);
 	};
+
+	// Extract to seperate css fille?
+	const taglineClasses = [
+		'animate__animated',
+		'animate__bounceInDown',
+		'animate__slower',
+	];
 
 	return (
 		<>
@@ -19,9 +26,7 @@ const MyComponent = () => {
 							height: '100%',
 						}}
 					>
-						{/* Render the site-specific content, such as tagline */}
 						<h2 style={{ flex: '1 0 auto' }}>{tagline}</h2>
-						{/* Render the offcanvas menu links */}
 						<ul style={{ flex: '0 1 auto' }}>
 							{links.map((link, index) => (
 								<li key={index}>{link}</li>
@@ -33,10 +38,8 @@ const MyComponent = () => {
 			<Toggle
 				menuOpen={menuOpen}
 				setMenuOpen={setMenuOpen}
-				className="my-custom-class"
+				handleCloseMenu={handleCloseMenu}
 			/>
 		</>
 	);
-};
-
-export default MyComponent;
+}
