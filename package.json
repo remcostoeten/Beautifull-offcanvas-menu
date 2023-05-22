@@ -1,0 +1,24 @@
+{
+  "name": "remcostoeten-offcanvasmenu",
+  "version": "1.0.0",
+  "description": "A offcanvas menu for React/NextJS build by remco stoeten",
+  "main": "src/OffcanvasMenu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remcostoeten/Beautifull-offcanvas-menu.git"
+  },
+  "keywords": [
+    "React",
+    "NextJs",
+    "OffcanvasMenu"
+  ],
+  "author": "Remco Stoeten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remcostoeten/Beautifull-offcanvas-menu/issues"
+  },
+  "homepage": "https://github.com/remcostoeten/Beautifull-offcanvas-menu#readme"
+}
